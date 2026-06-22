@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Coralik: Крестики-нолики — тактическая головоломка с бонусами</title>
-<meta name="description" content="Coralik: Крестики-нолики — переосмысление классики с бонусами (взрыв, заморозка, обмен), полностью настраиваемым дизайном и игрой офлайн. Бесплатно, без скрытых платежей.">
+<meta name="description" content="Coralik: Крестики-нолики — переосмысление классики с бонусами «Убери», «Замени» и «Замри», полностью настраиваемым дизайном и игрой офлайн. Бесплатно, без скрытых платежей.">
 <link rel="icon" href="data:,">
 <link rel="alternate" hreflang="ru" href="index.html">
 <link rel="alternate" hreflang="en" href="en.html">
@@ -35,11 +35,11 @@
     <div class="wrap">
       <div class="hero-copy">
         <span class="eyebrow">Android · офлайн · бесплатно</span>
-        <h1>Крестики-нолики,<br>которые <span class="hl">взрывают</span><br>и <span class="hl2">замораживают</span></h1>
+        <h1>Крестики-нолики<br>с бонусами «<span class="hl">Убери</span>»<br>и «<span class="hl2">Замри</span>»</h1>
         <p class="hero-sub">
           Coralik: Крестики-нолики с бонусами — знакомая игра, перестроенная в тактическую
-          головоломку с непредсказуемым финалом. Взрывайте фишки соперника, замораживайте
-          поле и собирайте дизайн игры под себя.
+          головоломку с непредсказуемым финалом. Убирайте фишку соперника, замораживайте
+          свой ход бонусом «Замри», меняйте фишки местами и собирайте дизайн игры под себя.
         </p>
         <div class="cta-row">
           <a class="btn btn-primary" href="#download">
@@ -53,9 +53,14 @@
 
       <div class="demo-stage">
         <div class="demo-card">
+          <div class="demo-bonus-row">
+            <img src="assets/icon-uberi.png" data-bonus="uberi" alt="Бонус «Убери»">
+            <img src="assets/icon-zameni.png" data-bonus="zameni" alt="Бонус «Замени»">
+            <img src="assets/icon-zamri.png" data-bonus="zamri" alt="Бонус «Замри»">
+          </div>
           <div class="demo-label"><b>Игрок 1</b> vs <b>Игрок 2</b></div>
           <div class="demo-board" data-demo-board
-               data-messages='["Обычный ход — как в классике…","…но у каждого есть бонусы.","Поле почти заполнено.","Взрыв! Фишка соперника уничтожена.","Заморозка остужает клетку на пару ходов.","И раунд начинается снова."]'>
+               data-messages='["Обычный ход — как в классике…","…но у каждого есть бонусы.","Поле почти заполнено.","«Убери» снимает фишку соперника с поля.","«Замри» замораживает клетку на пару ходов.","И раунд начинается снова."]'>
             <div class="demo-cell"></div>
             <div class="demo-cell"></div>
             <div class="demo-cell"></div>
@@ -87,20 +92,33 @@
         </p>
       </div>
 
+      <div class="bonus-strip">
+        <div class="bonus-card">
+          <img src="assets/icon-uberi.png" alt="Иконка бонуса «Убери»">
+          <h4>«Убери»</h4>
+          <p>Снимает с поля фишку соперника, разрушая его комбинацию.</p>
+        </div>
+        <div class="bonus-card">
+          <img src="assets/icon-zameni.png" alt="Иконка бонуса «Замени»">
+          <h4>«Замени»</h4>
+          <p>Меняет фишки на поле местами — крестик становится ноликом и наоборот.</p>
+        </div>
+        <div class="bonus-card">
+          <img src="assets/icon-zamri.png" alt="Иконка бонуса «Замри»">
+          <h4>«Замри»</h4>
+          <p>Замораживает ваш ход или клетку на поле на пару раундов.</p>
+        </div>
+      </div>
+
       <div class="modes-grid">
         <div class="mode-card solo">
-          <div class="mode-icon">💥</div>
-          <h3>Взрыв и заморозка</h3>
+          <div class="mode-icon">🎮</div>
+          <h3>Ограниченный запас бонусов</h3>
           <p>
-            Активируйте взрыв, чтобы уничтожить фишку соперника и разрушить его стратегию,
-            или заморозьте клетку, чтобы временно вывести её из игры. Используйте бонусы
-            точно в нужный момент — у каждого игрока их ограниченный запас.
+            У каждого игрока — свой запас бонусов «Убери», «Замени» и «Замри». Используйте
+            их в нужный момент: один точный ход бонусом может полностью изменить расклад
+            партии.
           </p>
-          <div class="tag-row">
-            <span class="tag">Взрыв фишки</span>
-            <span class="tag">Заморозка клетки</span>
-            <span class="tag">Обмен фишками</span>
-          </div>
         </div>
         <div class="mode-card duo">
           <div class="mode-icon">⏳</div>
@@ -289,7 +307,7 @@
   <section id="download">
     <div class="wrap">
       <div class="footer-cta">
-        <h2>Готовы взорвать пару клеток?</h2>
+        <h2>Готовы испытать бонусы в деле?</h2>
         <p>Скачайте Coralik: Крестики-нолики бесплатно и соберите игру под себя.</p>
         <div class="store-row">
           <a class="btn btn-primary" href="#" data-store="rustore">
