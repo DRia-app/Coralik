@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Coralik: Tic Tac Toe — a tactical puzzle with bonus powers</title>
-<meta name="description" content="Coralik: Tic Tac Toe reimagines the classic with bonus powers (explode, freeze, swap), a fully customizable look, and offline play. Free, no hidden payments.">
+<meta name="description" content="Coralik: Tic Tac Toe reimagines the classic with the &quot;Clap,&quot; &quot;Swap,&quot; and &quot;Stop&quot; bonuses, a fully customizable look, and offline play. Free, no hidden payments.">
 <link rel="icon" href="data:,">
 <link rel="alternate" hreflang="ru" href="index.html">
 <link rel="alternate" hreflang="en" href="en.html">
@@ -35,11 +35,12 @@
     <div class="wrap">
       <div class="hero-copy">
         <span class="eyebrow">Android · offline · free</span>
-        <h1>Tic-tac-toe that<br><span class="hl">explodes</span><br>and <span class="hl2">freezes</span></h1>
+        <h1>Tic-tac-toe with<br><span class="hl">"Clap"</span><br>and <span class="hl2">"Stop"</span></h1>
         <p class="hero-sub">
           Coralik: Tic Tac Toe takes the game you know and rebuilds it as a tactical
-          puzzle with an unpredictable finish. Blow up your opponent's marks, freeze
-          the board, and design the look of the game yourself.
+          puzzle with an unpredictable finish. Clap away your opponent's mark, stop your
+          turn with the "Stop" bonus, swap marks around, and design the look of the
+          game yourself.
         </p>
         <div class="cta-row">
           <a class="btn btn-primary" href="#download">
@@ -53,9 +54,14 @@
 
       <div class="demo-stage">
         <div class="demo-card">
+          <div class="demo-bonus-row">
+            <img src="assets/icon-uberi.png" data-bonus="uberi" alt="“Clap” bonus">
+            <img src="assets/icon-zameni.png" data-bonus="zameni" alt="“Swap” bonus">
+            <img src="assets/icon-zamri.png" data-bonus="zamri" alt="“Stop” bonus">
+          </div>
           <div class="demo-label"><b>Player 1</b> vs <b>Player 2</b></div>
           <div class="demo-board" data-demo-board
-               data-messages='["A regular move — just like the classic…","…but everyone has bonus powers.","The board is filling up.","Boom! An opponent\u2019s mark is destroyed.","Freeze locks a cell for a couple of turns.","And the round starts over."]'>
+               data-messages='["A regular move — just like the classic…","…but everyone has bonus powers.","The board is filling up.","\u201cClap\u201d takes an opponent\u2019s mark off the board.","\u201cStop\u201d locks a cell for a couple of turns.","And the round starts over."]'>
             <div class="demo-cell"></div>
             <div class="demo-cell"></div>
             <div class="demo-cell"></div>
@@ -87,20 +93,33 @@
         </p>
       </div>
 
+      <div class="bonus-strip">
+        <div class="bonus-card">
+          <img src="assets/icon-uberi.png" alt="“Clap” bonus icon">
+          <h4>"Clap"</h4>
+          <p>Takes an opponent's mark off the board, breaking up their combination.</p>
+        </div>
+        <div class="bonus-card">
+          <img src="assets/icon-zameni.png" alt="“Swap” bonus icon">
+          <h4>"Swap"</h4>
+          <p>Swaps marks on the board — an X becomes an O and vice versa.</p>
+        </div>
+        <div class="bonus-card">
+          <img src="assets/icon-zamri.png" alt="“Stop” bonus icon">
+          <h4>"Stop"</h4>
+          <p>Stops your turn or freezes a cell on the board for a couple of rounds.</p>
+        </div>
+      </div>
+
       <div class="modes-grid">
         <div class="mode-card solo">
-          <div class="mode-icon">💥</div>
-          <h3>Explode and freeze</h3>
+          <div class="mode-icon">🎮</div>
+          <h3>A limited supply of bonuses</h3>
           <p>
-            Trigger an explosion to destroy an opponent's mark and break their plan, or
-            freeze a cell to take it out of play for a few turns. Time your bonuses well —
-            each player only gets a limited supply.
+            Each player gets their own supply of "Clap," "Swap," and "Stop" bonuses.
+            Use them at the right moment — one well-timed bonus can completely change
+            how a match plays out.
           </p>
-          <div class="tag-row">
-            <span class="tag">Explode a mark</span>
-            <span class="tag">Freeze a cell</span>
-            <span class="tag">Swap marks</span>
-          </div>
         </div>
         <div class="mode-card duo">
           <div class="mode-icon">⏳</div>
@@ -168,23 +187,23 @@
 
       <figure class="studio-rail">
         <div class="studio-card">
-          <img src="assets/screenshot-menu.jpg" alt="Coralik main menu with an underwater design" loading="lazy">
+          <img src="assets/screenshot-menu.png" alt="Coralik main menu with an underwater design" loading="lazy">
           <figcaption>Underwater menu theme</figcaption>
         </div>
         <div class="studio-card">
-          <img src="assets/screenshot-dark.jpg" alt="Game board in a strict stone-carved theme" loading="lazy">
+          <img src="assets/screenshot-dark.png" alt="Game board in a strict stone-carved theme" loading="lazy">
           <figcaption>A strict style for tactics</figcaption>
         </div>
         <div class="studio-card">
-          <img src="assets/screenshot-cute.jpg" alt="Game board with cute shell and octopus sprites" loading="lazy">
+          <img src="assets/screenshot-cute.png" alt="Game board with cute shell and octopus sprites" loading="lazy">
           <figcaption>Cute sprites for kids</figcaption>
         </div>
         <div class="studio-card">
-          <img src="assets/screenshot-settings.jpg" alt="Settings screen with theme and button style options" loading="lazy">
+          <img src="assets/screenshot-settings.png" alt="Settings screen with theme and button style options" loading="lazy">
           <figcaption>Flexible appearance settings</figcaption>
         </div>
         <div class="studio-card">
-          <img src="assets/screenshot-gamesetup.jpg" alt="Screen for choosing game mode and board size" loading="lazy">
+          <img src="assets/screenshot-gamesetup.png" alt="Screen for choosing game mode and board size" loading="lazy">
           <figcaption>Game mode and board setup</figcaption>
         </div>
       </figure>
@@ -240,9 +259,10 @@
         <details class="faq-item" open>
           <summary>How do bonuses and special mechanics work?<span class="plus"></span></summary>
           <div class="faq-body">
-            During a match you can trigger special powers: explode an opponent's mark to
-            break their plan, freeze your move, or swap marks around. Keep the board's pace
-            in mind too — after a few turns, marks can vanish on their own!
+            During a match you can trigger special powers: use "Clap" to take an
+            opponent's mark off the board and break their plan, use "Stop" to lock your
+            turn, or "Swap" marks around. Keep the board's pace in mind too — after a few
+            turns, marks can vanish on their own!
           </div>
         </details>
         <details class="faq-item">
@@ -289,7 +309,7 @@
   <section id="download">
     <div class="wrap">
       <div class="footer-cta">
-        <h2>Ready to blow up a few cells?</h2>
+        <h2>Ready to put the bonuses to the test?</h2>
         <p>Download Coralik: Tic Tac Toe for free and build the game around your style.</p>
         <div class="store-row">
           <a class="btn btn-primary" href="#" data-store="rustore">
