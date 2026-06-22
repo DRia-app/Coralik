@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coralik: Крестики-нолики — тактическая головоломка с бонусами</title>
+<meta name="description" content="Coralik: Крестики-нолики — переосмысление классики с бонусами (взрыв, заморозка, обмен), полностью настраиваемым дизайном и игрой офлайн. Бесплатно, без скрытых платежей.">
+<link rel="icon" href="data:,">
+<link rel="alternate" hreflang="ru" href="index.html">
+<link rel="alternate" hreflang="en" href="en.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="brand-mark"><span>X</span><span>O</span></span>
+      <span class="brand-text">Coralik: X/O</span>
+    </a>
+    <nav class="lang-switch" aria-label="Выбор языка">
+      <a href="index.html" class="active">RU</a>
+      <a href="en.html">EN</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="eyebrow">Android · офлайн · бесплатно</span>
+        <h1>Крестики-нолики,<br>которые <span class="hl">взрывают</span><br>и <span class="hl2">замораживают</span></h1>
+        <p class="hero-sub">
+          Coralik: Крестики-нолики с бонусами — знакомая игра, перестроенная в тактическую
+          головоломку с непредсказуемым финалом. Взрывайте фишки соперника, замораживайте
+          поле и собирайте дизайн игры под себя.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#download">
+            Скачать игру
+          </a>
+          <a class="btn btn-secondary" href="#how-it-works">
+            Как это работает
+          </a>
+        </div>
+      </div>
+
+      <div class="demo-stage">
+        <div class="demo-card">
+          <div class="demo-label"><b>Игрок 1</b> vs <b>Игрок 2</b></div>
+          <div class="demo-board" data-demo-board
+               data-messages='["Обычный ход — как в классике…","…но у каждого есть бонусы.","Поле почти заполнено.","Взрыв! Фишка соперника уничтожена.","Заморозка остужает клетку на пару ходов.","И раунд начинается снова."]'>
+            <div class="demo-cell"></div>
+            <div class="demo-cell"></div>
+            <div class="demo-cell"></div>
+            <div class="demo-cell"></div>
+            <div class="demo-cell"></div>
+            <div class="demo-cell"></div>
+            <div class="demo-cell"></div>
+            <div class="demo-cell"></div>
+            <div class="demo-cell"></div>
+          </div>
+          <p class="demo-footnote"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- ===================== HOW IT WORKS / BONUSES ===================== -->
+  <section id="how-it-works">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Механика игры</span>
+        <h2>Каждый ход может перевернуть партию</h2>
+        <p>
+          Простые правила «три в ряд» остаются прежними. Но в игре есть бонусы,
+          которые превращают её в настоящую тактику — а ещё фишки могут пропадать
+          с поля сами, добавляя динамики.
+        </p>
+      </div>
+
+      <div class="modes-grid">
+        <div class="mode-card solo">
+          <div class="mode-icon">💥</div>
+          <h3>Взрыв и заморозка</h3>
+          <p>
+            Активируйте взрыв, чтобы уничтожить фишку соперника и разрушить его стратегию,
+            или заморозьте клетку, чтобы временно вывести её из игры. Используйте бонусы
+            точно в нужный момент — у каждого игрока их ограниченный запас.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Взрыв фишки</span>
+            <span class="tag">Заморозка клетки</span>
+            <span class="tag">Обмен фишками</span>
+          </div>
+        </div>
+        <div class="mode-card duo">
+          <div class="mode-icon">⏳</div>
+          <h3>Исчезающие фишки</h3>
+          <p>
+            Включите режим, в котором фишки пропадают с поля через несколько ходов.
+            Поле никогда не выглядит одинаково дважды, а заранее просчитать партию
+            становится почти невозможно.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Динамичное поле</span>
+            <span class="tag">Непредсказуемый финал</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="board-sizes">
+        <div class="size-pill">
+          <div class="grid-mini" style="grid-template-columns:repeat(3,1fr)">
+            <div></div><div></div><div></div>
+            <div></div><div></div><div></div>
+            <div></div><div></div><div></div>
+          </div>
+          <b>3×3</b>
+          <span>классика, 3 в ряд</span>
+        </div>
+        <div class="size-pill">
+          <div class="grid-mini" style="grid-template-columns:repeat(4,1fr)">
+            <div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div>
+          </div>
+          <b>4×4</b>
+          <span>3 в ряд — больше пространства для тактики</span>
+        </div>
+        <div class="size-pill">
+          <div class="grid-mini" style="grid-template-columns:repeat(4,1fr)">
+            <div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div>
+          </div>
+          <b>4×4</b>
+          <span>4 в ряд — для долгих стратегических партий</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- ===================== VISUAL CONSTRUCTOR ===================== -->
+  <section id="design">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Конструктор визуального стиля</span>
+        <h2>Соберите игру под своё настроение</h2>
+        <p>
+          Вы не выбираете готовую тему — вы конструируете внешний вид сами: фон, спрайты
+          крестиков и ноликов, стиль кнопок и анимации бонусов. Строгий минимализм для
+          тактики или яркое детское оформление — решаете вы.
+        </p>
+      </div>
+
+      <figure class="studio-rail">
+        <div class="studio-card">
+          <img src="assets/screenshot-menu.jpg" alt="Главное меню Coralik с подводным оформлением" loading="lazy">
+          <figcaption>Морская тема меню</figcaption>
+        </div>
+        <div class="studio-card">
+          <img src="assets/screenshot-dark.jpg" alt="Игровое поле в строгой каменной теме" loading="lazy">
+          <figcaption>Строгий стиль для тактики</figcaption>
+        </div>
+        <div class="studio-card">
+          <img src="assets/screenshot-cute.jpg" alt="Игровое поле с милыми спрайтами ракушки и осьминога" loading="lazy">
+          <figcaption>Милые спрайты для детей</figcaption>
+        </div>
+        <div class="studio-card">
+          <img src="assets/screenshot-settings.jpg" alt="Экран настроек с выбором темы и стиля кнопок" loading="lazy">
+          <figcaption>Гибкие настройки оформления</figcaption>
+        </div>
+        <div class="studio-card">
+          <img src="assets/screenshot-gamesetup.jpg" alt="Экран выбора режима игры и размера поля" loading="lazy">
+          <figcaption>Настройка режима и поля</figcaption>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- ===================== PERKS ===================== -->
+  <section id="perks">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Почему Coralik</span>
+        <h2>Тренажёр для мозга без лишних усложнений</h2>
+      </div>
+
+      <div class="perks-grid">
+        <div class="perk">
+          <span class="perk-icon">✈️</span>
+          <h4>Полностью офлайн</h4>
+          <p>Играйте в метро, самолёте или на даче — подключение к сети не требуется.</p>
+        </div>
+        <div class="perk">
+          <span class="perk-icon">🔓</span>
+          <h4>Без скрытых платежей</h4>
+          <p>Нет платных подписок и заблокированных функций. Весь контент доступен сразу.</p>
+        </div>
+        <div class="perk">
+          <span class="perk-icon">📺</span>
+          <h4>Ненавязчивая реклама</h4>
+          <p>Только стандартный баннер и реклама за вознаграждение — по вашему желанию.</p>
+        </div>
+        <div class="perk">
+          <span class="perk-icon">🌍</span>
+          <h4>Несколько языков</h4>
+          <p>Интерфейс переведён не только на русский, но и на другие языки.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- ===================== FAQ ===================== -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Вопросы и ответы</span>
+        <h2>Всё, что нужно знать перед игрой</h2>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>Как работают бонусы и механики в игре?<span class="plus"></span></summary>
+          <div class="faq-body">
+            В процессе партии вы можете активировать специальные возможности: взрывать фишки
+            соперника, чтобы разрушить его стратегию, замораживать свой ход или менять фишки
+            местами. Также помните о динамике — через несколько ходов фишки могут исчезать с поля!
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Можно ли играть, если нет интернета?<span class="plus"></span></summary>
+          <div class="faq-body">
+            Да, игра полностью автономна. Вы можете спокойно играть в метро, самолёте или
+            за городом в режиме офлайн.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Нужно ли платить за смену темы оформления или бонусы?<span class="plus"></span></summary>
+          <div class="faq-body">
+            Нет, абсолютно весь контент в игре бесплатный. В приложении нет встроенных покупок,
+            скрытых платежей или платных подписок — все функции доступны сразу.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Как работает монетизация, если всё бесплатно?<span class="plus"></span></summary>
+          <div class="faq-body">
+            Монетизация в игре минимизирована и максимально комфортна для игрока. Есть только
+            стандартный баннер и реклама за вознаграждение, которая используется очень редко.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Подходит ли игра для детей?<span class="plus"></span></summary>
+          <div class="faq-body">
+            В игре не содержится запрещённого контента. Вы можете легко переключить спрайты и
+            фон на детские варианты милого оформления. Тем не менее в игре присутствует реклама,
+            поэтому контроль со стороны взрослых всё-таки требуется.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Можно ли настроить игру в строгом стиле?<span class="plus"></span></summary>
+          <div class="faq-body">
+            Конечно! Если вы любите сосредоточиться на тактике или устали от обилия цветов,
+            выберите строгие элементы интерфейса, чтобы сделать графику минималистичной и стильной.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DOWNLOAD / FOOTER CTA ===================== -->
+  <section id="download">
+    <div class="wrap">
+      <div class="footer-cta">
+        <h2>Готовы взорвать пару клеток?</h2>
+        <p>Скачайте Coralik: Крестики-нолики бесплатно и соберите игру под себя.</p>
+        <div class="store-row">
+          <a class="btn btn-primary" href="#" data-store="rustore">
+            Скачать в RuStore
+          </a>
+          <a class="btn btn-secondary" href="#" data-store="googleplay">
+            Скачать в Google Play
+          </a>
+          <a class="btn btn-ghost" href="https://vk.com/coralik_game" target="_blank" rel="noopener">
+            Сообщество в VK
+          </a>
+        </div>
+        <p class="store-note">Ссылки на магазины приложений появятся сразу после публикации.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <small>© 2026 Coralik. Крестики-нолики с бонусами для Android.</small>
+    <div class="footer-links">
+      <a href="https://vk.com/coralik_game" target="_blank" rel="noopener">VK</a>
+      <a href="en.html">English version</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/demo.js"></script>
+</body>
+</html>

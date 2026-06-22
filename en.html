@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coralik: Tic Tac Toe — a tactical puzzle with bonus powers</title>
+<meta name="description" content="Coralik: Tic Tac Toe reimagines the classic with bonus powers (explode, freeze, swap), a fully customizable look, and offline play. Free, no hidden payments.">
+<link rel="icon" href="data:,">
+<link rel="alternate" hreflang="ru" href="index.html">
+<link rel="alternate" hreflang="en" href="en.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top">
+      <span class="brand-mark"><span>X</span><span>O</span></span>
+      <span class="brand-text">Coralik: X/O</span>
+    </a>
+    <nav class="lang-switch" aria-label="Language selector">
+      <a href="index.html">RU</a>
+      <a href="en.html" class="active">EN</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="eyebrow">Android · offline · free</span>
+        <h1>Tic-tac-toe that<br><span class="hl">explodes</span><br>and <span class="hl2">freezes</span></h1>
+        <p class="hero-sub">
+          Coralik: Tic Tac Toe takes the game you know and rebuilds it as a tactical
+          puzzle with an unpredictable finish. Blow up your opponent's marks, freeze
+          the board, and design the look of the game yourself.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#download">
+            Download the game
+          </a>
+          <a class="btn btn-secondary" href="#how-it-works">
+            See how it works
+          </a>
+        </div>
+      </div>
+
+      <div class="demo-stage">
+        <div class="demo-card">
+          <div class="demo-label"><b>Player 1</b> vs <b>Player 2</b></div>
+          <div class="demo-board" data-demo-board
+               data-messages='["A regular move — just like the classic…","…but everyone has bonus powers.","The board is filling up.","Boom! An opponent\u2019s mark is destroyed.","Freeze locks a cell for a couple of turns.","And the round starts over."]'>
+            <div class="demo-cell"></div>
+            <div class="demo-cell"></div>
+            <div class="demo-cell"></div>
+            <div class="demo-cell"></div>
+            <div class="demo-cell"></div>
+            <div class="demo-cell"></div>
+            <div class="demo-cell"></div>
+            <div class="demo-cell"></div>
+            <div class="demo-cell"></div>
+          </div>
+          <p class="demo-footnote"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- ===================== HOW IT WORKS / BONUSES ===================== -->
+  <section id="how-it-works">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Game mechanics</span>
+        <h2>Every move can turn the match around</h2>
+        <p>
+          The simple "three in a row" rules stay exactly as you remember them. But bonus
+          powers turn the game into real tactics — and marks can disappear from the board
+          on their own, keeping every match a little unpredictable.
+        </p>
+      </div>
+
+      <div class="modes-grid">
+        <div class="mode-card solo">
+          <div class="mode-icon">💥</div>
+          <h3>Explode and freeze</h3>
+          <p>
+            Trigger an explosion to destroy an opponent's mark and break their plan, or
+            freeze a cell to take it out of play for a few turns. Time your bonuses well —
+            each player only gets a limited supply.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Explode a mark</span>
+            <span class="tag">Freeze a cell</span>
+            <span class="tag">Swap marks</span>
+          </div>
+        </div>
+        <div class="mode-card duo">
+          <div class="mode-icon">⏳</div>
+          <h3>Vanishing marks</h3>
+          <p>
+            Turn on the mode where marks disappear from the board after a few turns.
+            The board never looks the same way twice, and planning a match too far
+            ahead becomes nearly impossible.
+          </p>
+          <div class="tag-row">
+            <span class="tag">A board that shifts</span>
+            <span class="tag">Unpredictable finishes</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="board-sizes">
+        <div class="size-pill">
+          <div class="grid-mini" style="grid-template-columns:repeat(3,1fr)">
+            <div></div><div></div><div></div>
+            <div></div><div></div><div></div>
+            <div></div><div></div><div></div>
+          </div>
+          <b>3×3</b>
+          <span>the classic, 3 in a row</span>
+        </div>
+        <div class="size-pill">
+          <div class="grid-mini" style="grid-template-columns:repeat(4,1fr)">
+            <div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div>
+          </div>
+          <b>4×4</b>
+          <span>3 in a row — more room to think ahead</span>
+        </div>
+        <div class="size-pill">
+          <div class="grid-mini" style="grid-template-columns:repeat(4,1fr)">
+            <div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div>
+            <div></div><div></div><div></div><div></div>
+          </div>
+          <b>4×4</b>
+          <span>4 in a row — for longer, strategic matches</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- ===================== VISUAL CONSTRUCTOR ===================== -->
+  <section id="design">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Visual style builder</span>
+        <h2>Build the game around your mood</h2>
+        <p>
+          You're not picking a ready-made theme — you're designing the look yourself:
+          background, X and O sprites, button style, and bonus animations. Strict and
+          minimal for tactics, or bright and playful for a relaxed round — it's up to you.
+        </p>
+      </div>
+
+      <figure class="studio-rail">
+        <div class="studio-card">
+          <img src="assets/screenshot-menu.jpg" alt="Coralik main menu with an underwater design" loading="lazy">
+          <figcaption>Underwater menu theme</figcaption>
+        </div>
+        <div class="studio-card">
+          <img src="assets/screenshot-dark.jpg" alt="Game board in a strict stone-carved theme" loading="lazy">
+          <figcaption>A strict style for tactics</figcaption>
+        </div>
+        <div class="studio-card">
+          <img src="assets/screenshot-cute.jpg" alt="Game board with cute shell and octopus sprites" loading="lazy">
+          <figcaption>Cute sprites for kids</figcaption>
+        </div>
+        <div class="studio-card">
+          <img src="assets/screenshot-settings.jpg" alt="Settings screen with theme and button style options" loading="lazy">
+          <figcaption>Flexible appearance settings</figcaption>
+        </div>
+        <div class="studio-card">
+          <img src="assets/screenshot-gamesetup.jpg" alt="Screen for choosing game mode and board size" loading="lazy">
+          <figcaption>Game mode and board setup</figcaption>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- ===================== PERKS ===================== -->
+  <section id="perks">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Why Coralik</span>
+        <h2>A brain workout without the clutter</h2>
+      </div>
+
+      <div class="perks-grid">
+        <div class="perk">
+          <span class="perk-icon">✈️</span>
+          <h4>Fully offline</h4>
+          <p>Play on the subway, on a flight, or anywhere with no signal — no connection needed.</p>
+        </div>
+        <div class="perk">
+          <span class="perk-icon">🔓</span>
+          <h4>No hidden payments</h4>
+          <p>No subscriptions, no features locked behind a paywall. Everything is available right away.</p>
+        </div>
+        <div class="perk">
+          <span class="perk-icon">📺</span>
+          <h4>Ads that stay out of your way</h4>
+          <p>Just a standard banner and optional rewarded ads — only when you choose to watch one.</p>
+        </div>
+        <div class="perk">
+          <span class="perk-icon">🌍</span>
+          <h4>Multiple languages</h4>
+          <p>The interface is translated into several languages, not just Russian.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><div class="divider"></div></div>
+
+  <!-- ===================== FAQ ===================== -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">FAQ</span>
+        <h2>Everything to know before you play</h2>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>How do bonuses and special mechanics work?<span class="plus"></span></summary>
+          <div class="faq-body">
+            During a match you can trigger special powers: explode an opponent's mark to
+            break their plan, freeze your move, or swap marks around. Keep the board's pace
+            in mind too — after a few turns, marks can vanish on their own!
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I play without an internet connection?<span class="plus"></span></summary>
+          <div class="faq-body">
+            Yes, the game runs fully offline. Play it on the subway, on a flight, or out of
+            town without any connection at all.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Do I need to pay to change the theme or unlock bonuses?<span class="plus"></span></summary>
+          <div class="faq-body">
+            No — every bit of content in the game is free. There are no in-app purchases,
+            hidden payments, or paid subscriptions; everything is available from the start.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>If everything is free, how does the game make money?<span class="plus"></span></summary>
+          <div class="faq-body">
+            Monetization is kept to a minimum and stays out of your way. The game shows a
+            standard banner plus an optional rewarded ad that's used very rarely.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Is the game suitable for kids?<span class="plus"></span></summary>
+          <div class="faq-body">
+            The game doesn't contain any inappropriate content, and you can easily switch
+            sprites and backgrounds to cute, kid-friendly options. That said, the game does
+            show ads, so some adult supervision is still a good idea.
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Can I set up the game in a strict, minimal style?<span class="plus"></span></summary>
+          <div class="faq-body">
+            Absolutely. If you'd rather focus on tactics or just want less color on screen,
+            pick the strict interface elements to make the graphics clean and minimal.
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DOWNLOAD / FOOTER CTA ===================== -->
+  <section id="download">
+    <div class="wrap">
+      <div class="footer-cta">
+        <h2>Ready to blow up a few cells?</h2>
+        <p>Download Coralik: Tic Tac Toe for free and build the game around your style.</p>
+        <div class="store-row">
+          <a class="btn btn-primary" href="#" data-store="rustore">
+            Get it on RuStore
+          </a>
+          <a class="btn btn-secondary" href="#" data-store="googleplay">
+            Get it on Google Play
+          </a>
+          <a class="btn btn-ghost" href="https://vk.com/coralik_game" target="_blank" rel="noopener">
+            Community on VK
+          </a>
+        </div>
+        <p class="store-note">Store links will go live right after publication.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <small>© 2026 Coralik. A tic-tac-toe game with bonus powers for Android.</small>
+    <div class="footer-links">
+      <a href="https://vk.com/coralik_game" target="_blank" rel="noopener">VK</a>
+      <a href="index.html">Русская версия</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/demo.js"></script>
+</body>
+</html>
