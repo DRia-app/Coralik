@@ -15,6 +15,7 @@
     }
     h1 { font-size: 1.8em; }
     h2 { font-size: 1.2em; margin-top: 2em; }
+    h3 { font-size: 1.0em; margin-top: 1.4em; }
     p  { margin: 0.6em 0; }
     ul { margin: 0.6em 0; padding-left: 1.4em; }
     li { margin: 0.3em 0; }
@@ -59,6 +60,11 @@
     <li>Ad interaction data (impressions, clicks)</li>
   </ul>
   <p>
+    All data transmitted by the AdMob SDK to Google's servers is sent over encrypted
+    HTTPS connections. The categories of data listed above are consistent with the
+    information declared in the App's Data Safety section on Google Play.
+  </p>
+  <p>
     <strong>IP-based ads personalization:</strong> Starting August 2026, Google is scheduled to begin
     rolling out IP-based ads measurement and personalization in the EEA, UK, and
     Switzerland (Google Vendor List Feature 3 — "Identify devices based on information
@@ -80,9 +86,11 @@
     is your explicit consent (Article 6(1)(a) GDPR).
   </p>
   <p>
-    On first launch, the App shows a consent dialog powered by Google's User Messaging
-    Platform (UMP) in accordance with the IAB Transparency and Consent Framework (TCF v2.2).
-    You may choose to allow or decline personalized ads:
+    The App uses <strong>Google's User Messaging Platform (UMP) SDK</strong> as its
+    Consent Management Platform (CMP), configured in compliance with
+    <a href="https://www.google.com/about/company/user-consent-policy/" target="_blank">Google's EU User Consent Policy</a>
+    and the IAB Transparency and Consent Framework (TCF v2.2). On first launch, the App
+    shows a consent dialog. You may choose to allow or decline personalized ads:
   </p>
   <ul>
     <li>If you <strong>consent</strong> — personalized ads are shown based on your interests.</li>
@@ -90,6 +98,11 @@
     require a limited amount of technical data (IP address, device info) but are not based
     on your interest profile.</li>
   </ul>
+  <p>
+    Your consent choices are encoded in a TC string (IAB TCF v2.2) and passed to each
+    advertising partner listed in Section 2 via the TCF framework, ensuring consent is
+    applied consistently across all parties.
+  </p>
   <p>
     You may review or withdraw your consent at any time by tapping
     <strong>Ad Privacy Settings</strong> in the app's Settings screen. Withdrawal of consent
@@ -110,9 +123,15 @@
     <li><strong>Restriction</strong> — request that processing be limited in certain circumstances.</li>
   </ul>
   <p>
-    Since the developer does not store your data, these rights are exercised directly
-    with Google at:
+    The developer does not store your data and cannot link an IP address or Advertising ID
+    to a specific named individual. Google AdMob acts as an independent data controller
+    for data collected through its SDK, under its own terms
+    (<a href="https://business.safety.google/controllerterms/" target="_blank">Google's Controller-Controller Data Protection Terms</a>).
+    The most effective way to exercise your rights is directly through Google at:
     <a href="https://myaccount.google.com/data-and-privacy" target="_blank">https://myaccount.google.com/data-and-privacy</a>.
+    You may also contact the developer at
+    <a href="mailto:coralik.app@gmail.com">coralik.app@gmail.com</a> —
+    the developer will make reasonable efforts to direct your request to Google.
   </p>
   <p>You also have the right to lodge a complaint with your local data protection authority.</p>
 
@@ -126,11 +145,80 @@
     Settings → Ad Privacy Settings (see Section 3).
   </p>
 
-  <h2>6. Children</h2>
+  <h2>6. Your Rights under US State Privacy Laws (CCPA / CPRA and Similar Laws)</h2>
+  <p><em>This section serves as our Notice at Collection under US State Privacy Laws.</em></p>
+  <p>
+    If you are a resident of California or another US state with applicable privacy
+    legislation (including Virginia, Colorado, Texas, Connecticut, and others), you
+    have the following rights regarding personal information collected through the App
+    by Google AdMob and its advertising partners.
+  </p>
+
+  <h3>Categories of personal information collected (via AdMob)</h3>
+  <ul>
+    <li><strong>Identifiers</strong> — Advertising ID (Android Ad ID), IP address.</li>
+    <li><strong>Device &amp; internet activity</strong> — device type, OS version,
+    language, time zone, ad impressions, and clicks.</li>
+  </ul>
+  <p>
+    This information is collected and processed by Google LLC and its advertising
+    partners — not by the developer. The developer does not sell or share your personal
+    information independently.
+  </p>
+
+  <h3>Your rights</h3>
+  <ul>
+    <li><strong>Right to Know</strong> — you may request disclosure of what personal
+    information has been collected about you, the purposes for which it is used, and the
+    categories of third parties with whom it is shared.</li>
+    <li><strong>Right to Delete</strong> — you may request deletion of your personal
+    information.</li>
+    <li><strong>Right to Opt-Out of Sale or Sharing</strong> — you may direct us not
+    to sell or share your personal information for cross-context behavioral advertising.</li>
+    <li><strong>Right to Correct</strong> — you may request correction of inaccurate
+    personal information.</li>
+    <li><strong>Right to Non-Discrimination</strong> — you will not receive
+    discriminatory treatment for exercising any of these rights.</li>
+  </ul>
+
+  <h3>How to exercise your rights</h3>
+  <p>
+    <strong>Opt-out of sale or sharing of your data (in-app):</strong> Open the App →
+    Settings → <em>Ad Privacy Settings</em>. This opens the US States consent form
+    (separate from the EEA/GDPR consent dialog) — select "Don't sell or share my data."
+    This preference is processed by Google's User Messaging Platform (UMP) and applied
+    to ad serving.
+  </p>
+  <p>
+    <strong>Delete your Advertising ID (device-level):</strong><br />
+    <em>Settings → Google → Ads → Delete advertising ID</em>
+  </p>
+  <p>
+    <strong>Exercise rights with Google directly:</strong><br />
+    Google AdMob acts as an independent controller for data collected through its SDK.
+    Requests to know, delete, or correct data are most effectively submitted directly
+    to Google at:<br />
+    <a href="https://myaccount.google.com/data-and-privacy" target="_blank">
+    https://myaccount.google.com/data-and-privacy</a>
+  </p>
+  <p>
+    For requests addressed to the developer, contact:
+    <a href="mailto:coralik.app@gmail.com">coralik.app@gmail.com</a>.
+    As the Business under applicable US state law, the developer will make reasonable
+    efforts to direct your request to Google AdMob. We will respond within 45 days,
+    or as required by applicable state law.
+  </p>
+
+  <h2>7. Children</h2>
   <p>
     This app is intended for users aged 13 and older. It is not directed at children
-    under 13. The target audience is declared as 13+ in both Google Play Console and
-    Google AdMob.
+    under 13. The App is classified as "not designed for children" in Google Play Console
+    (Target Audience: 13+) and is not enrolled in the Designed for Families program.
+    The content rating assigned via the Play Console content rating questionnaire reflects
+    a general audience. In the Mobile Ads SDK, the app sets Age Restricted Treatment to
+    <code>AgeRestrictedTreatment.UNSPECIFIED</code> via the <code>setAgeRestrictedTreatment()</code>
+    API, consistent with a general-audience (13+) app that relies on UMP consent signals
+    rather than age-restricted treatment.
   </p>
   <p>
     The developer does not collect any personal data from any user. All advertising-related
@@ -139,7 +227,7 @@
     <a href="https://families.google.com/familylink/" target="_blank">https://families.google.com/familylink/</a>.
   </p>
 
-  <h2>7. Data Retention</h2>
+  <h2>8. Data Retention</h2>
   <p>
     The developer does not collect or store any personal data. Game scores and settings
     are stored locally on your device only and never transmitted anywhere.
@@ -151,16 +239,16 @@
     <a href="https://policies.google.com/technologies/retention" target="_blank">https://policies.google.com/technologies/retention</a>.
   </p>
 
-  <h2>8. Changes to This Policy</h2>
+  <h2>9. Changes to This Policy</h2>
   <p>
     This Privacy Policy may be updated from time to time. Any changes will be posted on
     this page with an updated effective date. Users will be notified of material changes
     through the App or by the updated date on this page.
   </p>
 
-  <h2>9. Contact</h2>
+  <h2>10. Contact</h2>
   <p>
-    If you have any questions about this Privacy Policy, contact the developer and data controller:<br />
+    If you have any questions about this Privacy Policy, contact the developer:<br />
     <strong>Denis Riabov</strong><br />
     <a href="mailto:coralik.app@gmail.com">coralik.app@gmail.com</a>
   </p>
