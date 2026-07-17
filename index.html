@@ -1,342 +1,198 @@
 <!doctype html>
 <html lang="ru">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Coralik: Крестики-нолики — тактическая головоломка с бонусами</title>
-<meta name="description" content="Coralik: Крестики-нолики — переосмысление классики с бонусами «Убери», «Замени» и «Замри», полностью настраиваемым дизайном и игрой офлайн. Бесплатно, без скрытых платежей.">
-<link rel="icon" href="data:,">
-<link rel="alternate" hreflang="ru" href="index.html">
-<link rel="alternate" hreflang="en" href="en.html">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coralik — мобильные игры</title>
+  <meta name="description" content="Coralik — простые мобильные игры для коротких и спокойных игровых сессий.">
+  <style>
+    :root{
+      --bg:#071827;
+      --bg2:#0d2d49;
+      --card:rgba(255,255,255,.06);
+      --line:rgba(255,255,255,.11);
+      --text:#f5f7fb;
+      --muted:#b8c8d8;
+      --accent:#ff7b3f;
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top, rgba(52,135,194,.28), transparent 34rem),
+        linear-gradient(180deg,var(--bg2),var(--bg));
+    }
+
+    a{color:inherit;text-decoration:none}
+
+    .wrap{
+      width:min(1040px,calc(100% - 32px));
+      margin:auto;
+    }
+
+    header{
+      padding:28px 0;
+      border-bottom:1px solid var(--line);
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      font-weight:800;
+      font-size:1.15rem;
+    }
+
+    .brand img{
+      width:52px;
+      height:52px;
+      object-fit:contain;
+    }
+
+    .hero{
+      padding:82px 0 56px;
+      text-align:center;
+    }
+
+    h1{
+      margin:0 0 18px;
+      font-size:clamp(2.5rem,8vw,5.6rem);
+      line-height:.95;
+    }
+
+    .lead{
+      max-width:680px;
+      margin:0 auto;
+      color:var(--muted);
+      font-size:clamp(1.05rem,2vw,1.3rem);
+      line-height:1.65;
+    }
+
+    .games{
+      padding:20px 0 80px;
+    }
+
+    .games h2{
+      margin:0 0 24px;
+      font-size:clamp(1.7rem,4vw,2.7rem);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:20px;
+    }
+
+    .card{
+      display:block;
+      padding:28px;
+      border:1px solid var(--line);
+      border-radius:24px;
+      background:var(--card);
+      transition:.2s ease;
+    }
+
+    .card:hover{
+      transform:translateY(-3px);
+      border-color:rgba(255,123,63,.55);
+      background:rgba(255,255,255,.085);
+    }
+
+    .tag{
+      display:inline-block;
+      margin-bottom:16px;
+      padding:7px 10px;
+      border-radius:999px;
+      background:rgba(255,123,63,.14);
+      color:#ffd6c2;
+      font-size:.78rem;
+      font-weight:800;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+
+    .card h3{
+      margin:0 0 12px;
+      font-size:1.45rem;
+    }
+
+    .card p{
+      margin:0 0 22px;
+      color:var(--muted);
+      line-height:1.6;
+    }
+
+    .link{
+      color:#fff;
+      font-weight:800;
+    }
+
+    footer{
+      padding:28px 0 38px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      text-align:center;
+    }
+
+    @media(max-width:700px){
+      .grid{grid-template-columns:1fr}
+      .hero{padding-top:60px}
+    }
+  </style>
 </head>
 <body>
-
-<header class="site-header">
-  <div class="wrap">
-    <a class="brand" href="#top">
-      <span class="brand-mark"><span>X</span><span>O</span></span>
-      <span class="brand-text">Coralik: X/O</span>
-    </a>
-    <nav class="lang-switch" aria-label="Выбор языка">
-      <a href="index.html" class="active">RU</a>
-      <a href="en.html">EN</a>
-    </nav>
-  </div>
-</header>
-
-<main id="top">
-
-  <!-- ===================== HERO ===================== -->
-  <section class="hero">
+  <header>
     <div class="wrap">
-      <div class="hero-copy">
-        <span class="eyebrow">Android · офлайн · бесплатно</span>
-        <h1>Крестики-нолики<br>с бонусами «<span class="hl">Убери</span>»<br>и «<span class="hl2">Замри</span>»</h1>
-        <p class="hero-sub">
-          Coralik: Крестики-нолики с бонусами — знакомая игра, перестроенная в тактическую
-          головоломку с непредсказуемым финалом. Убирайте фишку соперника, замораживайте
-          свой ход бонусом «Замри», меняйте фишки местами и собирайте дизайн игры под себя.
-        </p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="#download">
-            Скачать игру
-          </a>
-          <a class="btn btn-secondary" href="#how-it-works">
-            Как это работает
-          </a>
-        </div>
-      </div>
-
-      <div class="demo-stage">
-        <div class="demo-card">
-          <div class="demo-bonus-row">
-            <img src="assets/icon-uberi.png" data-bonus="uberi" alt="Бонус «Убери»">
-            <img src="assets/icon-zameni.png" data-bonus="zameni" alt="Бонус «Замени»">
-            <img src="assets/icon-zamri.png" data-bonus="zamri" alt="Бонус «Замри»">
-          </div>
-          <div class="demo-label"><b>Игрок 1</b> vs <b>Игрок 2</b></div>
-          <div class="demo-board" data-demo-board
-               data-messages='["Обычный ход — как в классике…","…но у каждого есть бонусы.","Поле почти заполнено.","«Убери» снимает фишку соперника с поля.","«Замри» замораживает клетку на пару ходов.","И раунд начинается снова."]'>
-            <div class="demo-cell"></div>
-            <div class="demo-cell"></div>
-            <div class="demo-cell"></div>
-            <div class="demo-cell"></div>
-            <div class="demo-cell"></div>
-            <div class="demo-cell"></div>
-            <div class="demo-cell"></div>
-            <div class="demo-cell"></div>
-            <div class="demo-cell"></div>
-          </div>
-          <p class="demo-footnote"></p>
-        </div>
-      </div>
+      <a class="brand" href="./">
+        <img src="games/tic-tac-toe/assets/LOGO_CORALIK_1.png" alt="Coralik">
+        <span>Coralik</span>
+      </a>
     </div>
-  </section>
+  </header>
 
-  <div class="wrap"><div class="divider"></div></div>
+  <main>
+    <section class="hero wrap">
+      <h1>Игры Coralik</h1>
+      <p class="lead">
+        Простые мобильные игры с понятными правилами, гибкими настройками
+        и комфортной рекламой без постоянных прерываний.
+      </p>
+    </section>
 
-  <!-- ===================== HOW IT WORKS / BONUSES ===================== -->
-  <section id="how-it-works">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Механика игры</span>
-        <h2>Каждый ход может перевернуть партию</h2>
-        <p>
-          Простые правила «три в ряд» остаются прежними. Но в игре есть бонусы,
-          которые превращают её в настоящую тактику — а ещё фишки могут пропадать
-          с поля сами, добавляя динамики.
-        </p>
-      </div>
+    <section class="games wrap">
+      <h2>Наши игры</h2>
 
-      <div class="bonus-strip">
-        <div class="bonus-card">
-          <img src="assets/icon-uberi.png" alt="Иконка бонуса «Убери»">
-          <h4>«Убери»</h4>
-          <p>Снимает с поля фишку соперника, разрушая его комбинацию.</p>
-        </div>
-        <div class="bonus-card">
-          <img src="assets/icon-zameni.png" alt="Иконка бонуса «Замени»">
-          <h4>«Замени»</h4>
-          <p>Меняет фишки на поле местами — крестик становится ноликом и наоборот.</p>
-        </div>
-        <div class="bonus-card">
-          <img src="assets/icon-zamri.png" alt="Иконка бонуса «Замри»">
-          <h4>«Замри»</h4>
-          <p>Замораживает ваш ход или клетку на поле на пару раундов.</p>
-        </div>
-      </div>
-
-      <div class="modes-grid">
-        <div class="mode-card solo">
-          <div class="mode-icon">🎮</div>
-          <h3>Ограниченный запас бонусов</h3>
+      <div class="grid">
+        <a class="card" href="games/tic-tac-toe/">
+          <span class="tag">Логическая игра</span>
+          <h3>Крестики-нолики 2.0</h3>
           <p>
-            У каждого игрока — свой запас бонусов «Убери», «Замени» и «Замри». Используйте
-            их в нужный момент: один точный ход бонусом может полностью изменить расклад
-            партии.
+            Классические поля 3×3 и 4×4, дополнительные механики,
+            исчезающие фишки, игра против ИИ или вдвоём.
           </p>
-        </div>
-        <div class="mode-card duo">
-          <div class="mode-icon">⏳</div>
-          <h3>Исчезающие фишки</h3>
+          <span class="link">Открыть страницу →</span>
+        </a>
+
+        <a class="card" href="games/2048/">
+          <span class="tag">Головоломка</span>
+          <h3>2048</h3>
           <p>
-            Включите режим, в котором фишки пропадают с поля через несколько ходов.
-            Поле никогда не выглядит одинаково дважды, а заранее просчитать партию
-            становится почти невозможно.
+            Слияние цифр и картинок, разные размеры поля,
+            множество тем, сохранение прогресса и игра офлайн.
           </p>
-          <div class="tag-row">
-            <span class="tag">Динамичное поле</span>
-            <span class="tag">Непредсказуемый финал</span>
-          </div>
-        </div>
+          <span class="link">Открыть страницу →</span>
+        </a>
       </div>
+    </section>
+  </main>
 
-      <div class="board-sizes">
-        <div class="size-pill">
-          <div class="grid-mini" style="grid-template-columns:repeat(3,1fr)">
-            <div></div><div></div><div></div>
-            <div></div><div></div><div></div>
-            <div></div><div></div><div></div>
-          </div>
-          <b>3×3</b>
-          <span>классика, 3 в ряд</span>
-        </div>
-        <div class="size-pill">
-          <div class="grid-mini" style="grid-template-columns:repeat(4,1fr)">
-            <div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div>
-          </div>
-          <b>4×4</b>
-          <span>3 в ряд — больше пространства для тактики</span>
-        </div>
-        <div class="size-pill">
-          <div class="grid-mini" style="grid-template-columns:repeat(4,1fr)">
-            <div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div>
-            <div></div><div></div><div></div><div></div>
-          </div>
-          <b>4×4</b>
-          <span>4 в ряд — для долгих стратегических партий</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="wrap"><div class="divider"></div></div>
-
-  <!-- ===================== VISUAL CONSTRUCTOR ===================== -->
-  <section id="design">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Конструктор визуального стиля</span>
-        <h2>Соберите игру под своё настроение</h2>
-        <p>
-          Вы не выбираете готовую тему — вы конструируете внешний вид сами: фон, спрайты
-          крестиков и ноликов, стиль кнопок и анимации бонусов. Строгий минимализм для
-          тактики или яркое детское оформление — решаете вы.
-        </p>
-      </div>
-
-      <figure class="studio-rail">
-        <div class="studio-card">
-          <img src="assets/screenshot-menu.png" alt="Главное меню Coralik с подводным оформлением" loading="lazy">
-          <figcaption>Морская тема меню</figcaption>
-        </div>
-        <div class="studio-card">
-          <img src="assets/screenshot-dark.png" alt="Игровое поле в строгой каменной теме" loading="lazy">
-          <figcaption>Строгий стиль для тактики</figcaption>
-        </div>
-        <div class="studio-card">
-          <img src="assets/screenshot-cute.png" alt="Игровое поле с милыми спрайтами ракушки и осьминога" loading="lazy">
-          <figcaption>Милые спрайты для детей</figcaption>
-        </div>
-        <div class="studio-card">
-          <img src="assets/screenshot-settings.png" alt="Экран настроек с выбором темы и стиля кнопок" loading="lazy">
-          <figcaption>Гибкие настройки оформления</figcaption>
-        </div>
-        <div class="studio-card">
-          <img src="assets/screenshot-gamesetup.png" alt="Экран выбора режима игры и размера поля" loading="lazy">
-          <figcaption>Настройка режима и поля</figcaption>
-        </div>
-      </figure>
-    </div>
-  </section>
-
-  <div class="wrap"><div class="divider"></div></div>
-
-  <!-- ===================== PERKS ===================== -->
-  <section id="perks">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Почему Coralik</span>
-        <h2>Тренажёр для мозга без лишних усложнений</h2>
-      </div>
-
-      <div class="perks-grid">
-        <div class="perk">
-          <span class="perk-icon">✈️</span>
-          <h4>Полностью офлайн</h4>
-          <p>Играйте в метро, самолёте или на даче — подключение к сети не требуется.</p>
-        </div>
-        <div class="perk">
-          <span class="perk-icon">🔓</span>
-          <h4>Без скрытых платежей</h4>
-          <p>Нет платных подписок и заблокированных функций. Весь контент доступен сразу.</p>
-        </div>
-        <div class="perk">
-          <span class="perk-icon">📺</span>
-          <h4>Ненавязчивая реклама</h4>
-          <p>Только стандартный баннер и реклама за вознаграждение — по вашему желанию.</p>
-        </div>
-        <div class="perk">
-          <span class="perk-icon">🌍</span>
-          <h4>Несколько языков</h4>
-          <p>Интерфейс переведён не только на русский, но и на другие языки.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="wrap"><div class="divider"></div></div>
-
-  <!-- ===================== FAQ ===================== -->
-  <section id="faq">
-    <div class="wrap">
-      <div class="section-head">
-        <span class="eyebrow">Вопросы и ответы</span>
-        <h2>Всё, что нужно знать перед игрой</h2>
-      </div>
-
-      <div class="faq-list">
-        <details class="faq-item" open>
-          <summary>Как работают бонусы и механики в игре?<span class="plus"></span></summary>
-          <div class="faq-body">
-            В процессе партии вы можете активировать специальные возможности: взрывать фишки
-            соперника, чтобы разрушить его стратегию, замораживать свой ход или менять фишки
-            местами. Также помните о динамике — через несколько ходов фишки могут исчезать с поля!
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>Можно ли играть, если нет интернета?<span class="plus"></span></summary>
-          <div class="faq-body">
-            Да, игра полностью автономна. Вы можете спокойно играть в метро, самолёте или
-            за городом в режиме офлайн.
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>Нужно ли платить за смену темы оформления или бонусы?<span class="plus"></span></summary>
-          <div class="faq-body">
-            Нет, абсолютно весь контент в игре бесплатный. В приложении нет встроенных покупок,
-            скрытых платежей или платных подписок — все функции доступны сразу.
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>Как работает монетизация, если всё бесплатно?<span class="plus"></span></summary>
-          <div class="faq-body">
-            Монетизация в игре минимизирована и максимально комфортна для игрока. Есть только
-            стандартный баннер и реклама за вознаграждение, которая используется очень редко.
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>Подходит ли игра для детей?<span class="plus"></span></summary>
-          <div class="faq-body">
-            В игре не содержится запрещённого контента. Вы можете легко переключить спрайты и
-            фон на детские варианты милого оформления. Тем не менее в игре присутствует реклама,
-            поэтому контроль со стороны взрослых всё-таки требуется.
-          </div>
-        </details>
-        <details class="faq-item">
-          <summary>Можно ли настроить игру в строгом стиле?<span class="plus"></span></summary>
-          <div class="faq-body">
-            Конечно! Если вы любите сосредоточиться на тактике или устали от обилия цветов,
-            выберите строгие элементы интерфейса, чтобы сделать графику минималистичной и стильной.
-          </div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== DOWNLOAD / FOOTER CTA ===================== -->
-  <section id="download">
-    <div class="wrap">
-      <div class="footer-cta">
-        <h2>Готовы испытать бонусы в деле?</h2>
-        <p>Скачайте Coralik: Крестики-нолики бесплатно и соберите игру под себя.</p>
-        <div class="store-row">
-          <a class="btn btn-primary" href="https://www.rustore.ru/catalog/app/com.coralik.tictactoe" data-store="rustore">
-            Скачать в RuStore
-          </a>
-          <a class="btn btn-secondary" href="#" data-store="googleplay">
-            Скачать в Google Play
-          </a>
-          <a class="btn btn-ghost" href="https://vk.com/coralik_game" target="_blank" rel="noopener">
-            Сообщество в VK
-          </a>
-        </div>
-        <p class="store-note">Ссылки на магазины приложений появятся сразу после публикации.</p>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="wrap">
-    <small>© 2026 Coralik. Крестики-нолики с бонусами для Android.</small>
-    <div class="footer-links">
-      <a href="https://vk.com/coralik_game" target="_blank" rel="noopener">VK</a>
-      <a href="en.html">English version</a>
-    </div>
-  </div>
-</footer>
-
-<script src="assets/demo.js"></script>
+  <footer>
+    <div class="wrap">© Coralik</div>
+  </footer>
 </body>
 </html>
